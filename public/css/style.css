@@ -1,0 +1,116 @@
+html {
+  font-family: 'Helvetica Neue'!important;
+}
+
+h1, h2, h3,
+h4, h5 {
+  font-weight:bold!important;
+  color:#333;
+}
+h5{  font-size:1rem!important; }
+
+nav{box-shadow:none!important;}
+nav a{color:#333!important;}
+
+nav ul a {
+    color: #9fa1a2!important;
+    font-size: 12px!important;
+}
+nav  {
+    height: 34px!important;
+    line-height: 34px!important;
+}
+nav .brand-logo {
+    font-size: 1.1rem!important;
+    font-weight: bold!important;
+}
+
+nav, footer {
+  padding: 0 0 0 10px!important;
+}
+
+footer {
+  font-size:.8rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex!important;
+  align-items: center;
+  height:90vh;
+
+}
+
+.row { margin-bottom: 0!important; }
+
+@media(max-width: 1439px){
+  #login-form {
+      margin: 0 auto;
+      width: 100%;
+
+    }
+  }
+
+@media(min-width: 662px){
+  #login-form {
+      margin: 0 auto;
+      width: 33%;
+      box-shadow: 0px 1px 12px 0px #f0f0f0;
+      padding: 20px 10px;
+      border-radius: 5px;
+  }
+
+  .errors{position: absolute;color:red; font-size: 14px; line-height: 45px;font-weight: bold;}
+
+}
+
+.input-field > label {
+    font-size: .8rem!important;
+    font-weight: bold;
+    top: 12px!important;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #13aa52!important;
+  -webkit-box-shadow: 0 1px 0 0 #13aa52!important;
+  box-shadow: 0 1px 0 0 #13aa52!important;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label {
+  color: #13aa52!important;
+}
+
+input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default) {
+  border-bottom: 1px solid #e4e4e4!important;
+}
+
+button {
+    padding: 10px 21px;
+    font-weight: bold!important;
+    text-transform: uppercase!important;
+    font-size: .7rem!important;
+    border:none;
+    box-shadow: 0 0 1px 0px #ccc;
+    background: #fff;
+    cursor:pointer;
+    width:100%;
+    border-left: solid 2px #13aa52;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 3px 0 #ccc;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 27px;
+    right: 13px;
+    font-size: 12px;
+    color: #ccc;
+    cursor: pointer;
+    z-index: 1;
+}

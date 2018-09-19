@@ -1,0 +1,47 @@
+<div class="errors">
+  {{#if errors}}
+    {{#each errors}}
+    <div class="error">
+      <i class=""></i>{{msg}}
+      <a href="#close"></a>
+    </div>
+    {{/each}}
+{{/if}}
+</div>
+<div id="login-form">
+  <h5 class="center-align">Account Registration</h5>
+  <div class="row">
+    <form method="post" action="/users/register" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" name="name" type="text" value="{{form.name}}">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" name="email" type="text">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l12">
+          <input id="username" name="username" type="text">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m12 l6">
+          <i class="far fa-eye"></i>
+          <input id="password" name="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s12 m12 l6">
+          <i class="far fa-eye"></i>
+          <input id="confirm" name="password2" type="password">
+          <label for="confirm">Confirm Password</label>
+        </div>
+      </div>
+
+      <button type="submit" name="button">Register Me</button>
+    </form>
+  </div>
+</div>
