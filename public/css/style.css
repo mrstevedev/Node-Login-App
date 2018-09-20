@@ -60,8 +60,14 @@ main {
       border-radius: 5px;
   }
 
-  .errors{position: absolute;color:red; font-size: 14px; line-height: 45px;font-weight: bold;}
-
+  .errors{
+    position: absolute;
+    color:red;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 23px;
+  }
 }
 
 .input-field > label {
@@ -113,4 +119,12 @@ button:hover {
     color: #ccc;
     cursor: pointer;
     z-index: 1;
+}
+
+::-moz-selection { /* Code for Firefox */
+   color: #13aa52;
+}
+
+::selection {
+   color: #000;
 }

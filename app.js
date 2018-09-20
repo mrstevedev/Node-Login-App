@@ -54,15 +54,12 @@ app.use(passport.session())
 app.use(express.json());
 
 // Connect Flash
-app.use(flash())
+app.use(flash());
 
-
-// //Global consts
-// app.use((req, res, next) => {
-//   res.locals.success_msg = req.flash('success_msg')
-//   res.locals.error_msg = req.flash('error_msg')
-//   res.locals.error = req.flash('error')
-// })
+// Global consts
+app.use((req, res, next) => {
+  next();
+});
 
 app.use('/', routes)
 app.use('/users', users)

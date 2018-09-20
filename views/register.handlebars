@@ -18,26 +18,26 @@
           <label for="name">Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="email" name="email" type="text">
+          <input id="email" name="email" type="text" value="{{form.email}}">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m12 l12">
-          <input id="username" name="username" type="text">
+          <input id="username" name="username" type="text" value="{{form.username}}">
           <label for="username">Username</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12 m12 l6">
-          <i class="far fa-eye"></i>
+          <i class="far fa-eye" onclick="showPassword()"></i>
           <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
         <div class="input-field col s12 m12 l6">
-          <i class="far fa-eye"></i>
-          <input id="confirm" name="password2" type="password">
-          <label for="confirm">Confirm Password</label>
+          <i class="far fa-eye" onclick="showConfirmPassword()"></i>
+          <input id="password2" name="password2" type="password">
+          <label for="password2">Confirm Password</label>
         </div>
       </div>
 
@@ -45,3 +45,17 @@
     </form>
   </div>
 </div>
+<script>
+
+showConfirmPassword = () => {
+  const pw2 = document.getElementById("password");
+}
+showPassword = () => {
+  const pw1 = document.getElementById("password");
+    if (pw1.type === "password") {
+        pw1.type = "text";
+    } else {
+        pw1.type = "password";
+    }
+}
+</script>
