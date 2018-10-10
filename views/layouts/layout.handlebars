@@ -14,10 +14,13 @@
         <a href="#!" class="brand-logo">Node Login App</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+          {{#if user}}
           <li><a href="/">Dashboard</a></li>
+          <li><a href="/users/logout">Logout</a></li>
+          {{else}}
           <li><a href="/users/login">Login</a></li>
           <li><a href="/users/register">Register</a></li>
-          <li><a href="/users/logout">Logout</a></li>
+          {{/if}}
         </ul>
       </div>
     </nav>
@@ -31,6 +34,28 @@
   </ul>
     <div class="container">
       <main id="content">
+        <div class="errors">
+        {{#if success_msg}}
+          <div class="alert-success">
+            {{success_msg}}
+          </div>
+        {{/if}}
+
+        {{#if error_msg}}
+          <div class="alert-danger">
+            {{error_msg}}
+          </div>
+        {{/if}}
+
+        {{#if error}}
+          <div class="alert-danger">
+            <i class="fas fa-user-times"></i>
+            {{error}}
+          </div>
+        {{/if}}
+      </div>
+
+
         {{{body}}}
       </main>
     </div>

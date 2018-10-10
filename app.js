@@ -20,6 +20,8 @@ const users = require('./routes/users')
 // Init App
 const app = express();
 
+
+
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({'defaultLayout': 'layout'}))
@@ -58,8 +60,14 @@ app.use(flash());
 
 // Global consts
 app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg')
+  res.locals.error_msg = req.flash('error_msg')
+  res.locals.error = req.flash('error')
+  res.locals.user = req.user || null
   next();
 });
+
+
 
 app.use('/', routes)
 app.use('/users', users)
