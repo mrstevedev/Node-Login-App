@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema
+const env = require('dotenv').config()
 
-const uri = 'mongodb+srv://admin:Godfatherdon1~@my-mongo-cluster-7dgup.mongodb.net/node-login-app?retryWrites=true'
+const uri = 'mongodb+srv://admin:'+process.env.MONGO_ATLAS_PW+'@my-mongo-cluster-7dgup.mongodb.net/node-login-app?retryWrites=true'
 mongoose.connect(uri, {useNewUrlParser: true })
 const db = mongoose.connection
 
