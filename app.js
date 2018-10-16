@@ -8,11 +8,6 @@ const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
-const mongo = require('mongodb')
-const mongoose = require('mongoose')
-const uri = 'mongodb+srv://admin:Godfatherdon1!@my-mongo-cluster-7dgup.mongodb.net/node-login-app?retryWrites=true'
-mongoose.connect(uri, { useNewUrlParser: true } )
-const db = mongoose.connection
 
 const routes = require('./routes/index')
 const users = require('./routes/users')
